@@ -24,14 +24,6 @@ const rxHost = /^(\*\.)?([a-z0-9-]+\.)+[a-z]{2,}$/i;
 /** Normalized starter-pack id stored on the style object for idempotency. */
 const kStarterTag = 'zlsStarter';
 
-function hostOf(url) {
-  try {
-    return new URL(url).hostname.toLowerCase();
-  } catch {
-    return '';
-  }
-}
-
 /** Invalidate per-URL injection caches + ask every tab to re-query its styles. */
 function reapplyAllTabs() {
   urlCacheEntries.clear();
@@ -92,17 +84,17 @@ const zlsApi = {
     }));
   },
   async installStarter(id) {
-    const t = STARTER_THEMES.find(t => t.id === id);
-    if (!t) throw new Error('unknown starter theme');
+    const theme = STARTER_THEMES.find(x => x.id === id);
+    if (!theme) throw new Error('unknown starter theme');
     const dup = styleMan.getAll().some(s => s[kStarterTag] === id);
     if (dup) return {ok: true, already: true};
     const [res] = await styleMan.importMany([{
-      [kStarterTag]: t.id,
-      name: t.name,
+      [kStarterTag]: theme.id,
+      name: theme.name,
       enabled: true,
       sections: [{
-        code: t.code,
-        domains: [...t.domains],
+        code: theme.code,
+        domains: [...theme.domains],
       }],
     }]);
     if (res.err) throw new Error(String(res.err));

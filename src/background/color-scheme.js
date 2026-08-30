@@ -89,10 +89,10 @@ export function siteSchemeOverride(url) {
   } catch {
     return null;
   }
-  const map = prefs.__values[P_SITE_SCHEMES];
-  if (!host || !map) return null;
+  const ovrMap = prefs.__values[P_SITE_SCHEMES];
+  if (!host || !ovrMap) return null;
   for (let h = host; h;) {
-    const v = map[h];
+    const v = ovrMap[h];
     if (v === kDark || v === kLight) return v;
     const dot = h.indexOf('.');
     h = dot > 0 ? h.slice(dot + 1) : '';
