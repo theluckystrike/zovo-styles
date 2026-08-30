@@ -40,7 +40,7 @@ switched from npm to pnpm because upstream's `preinstall` enforces it.
    change (`src/background/zvst-api.js`, `src/content/apply.js` case
    `zlsRequery`). Pref key `zls.siteSchemes`.
 4. **One-click full backup/restore** — single-file JSON envelope
-   (`app: zovo-styles, kind: full-backup`) covering styles + non-default
+   (`app: zls-styles, kind: full-backup`) covering styles + non-default
    prefs + order + lz values; restore accepts the envelope AND upstream
    Stylus backups. `src/background/zvst-api.js` (`exportFullBackup` /
    `importFullBackup`), buttons in popup and manager, envelope accepted by
