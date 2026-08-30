@@ -126,7 +126,7 @@ export function getByUrl(url, id, tabId, needsOvrs) {
      * @type {MatchUrlResult} */
     const res = {
       excluded: !!(ovr = style.exclusions) && ovr.some(urlMatchOverride, query),
-      excludedScheme: !colorScheme.themeAllowsStyle(style),
+      excludedScheme: !colorScheme.themeAllowsStyle(style, url),
       included: matching = !!(ovr = style[kInclusions]) && ovr.some(urlMatchOverride, query),
       [kTabOvr]: tabOverrides?.[style.id] ?? null,
       [pPatchCsp]: tabCSP?.[style.id] || null,
@@ -227,7 +227,7 @@ export function getSectionsByUrl(url, {id, init, dark} = {}) {
   res.cfg = !id && {
     ass: __values[pStyleViaASS] &&
       (!(v = optionSites[pStyleViaASS]) || isOptionSite(v, url)),
-    dark: isTop && colorScheme.isDark,
+    dark: isTop && colorScheme.isDarkFor(url),
     // TODO: enable in FF when it supports sourceURL comment in style elements (also options.html)
     name: __values.exposeStyleName,
     nonce: td.nonce?.[frameId],

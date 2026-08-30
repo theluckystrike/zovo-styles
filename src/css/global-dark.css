@@ -24,11 +24,12 @@
     /* min/max are exposed in case we want to use an overdrive color for emphasis */
     --cmin: hsl(0, 0%, 100%);
     --cmax: hsl(0, 0%, 0%);
-    --accent-1: hsl(180, 50%, 65%);
-    --accent-2: hsl(180, 45%, 40%);
-    --accent-3: hsl(180, 30%, 20%);
-    --accent-4: hsl(180, 27%, 17%);
-    --accent-5: hsl(180, 25%, 14%);
+    /* Fork (Zovo Styles): brand violet ramp (was upstream teal hue 180) */
+    --accent-1: hsl(255, 60%, 72%);
+    --accent-2: hsl(255, 50%, 55%);
+    --accent-3: hsl(255, 35%, 28%);
+    --accent-4: hsl(255, 32%, 24%);
+    --accent-5: hsl(255, 28%, 19%);
     --input-bg: var(--c95);
     --gold1: darkgoldenrod;
     --red1: hsl(0, 100%, 65%);

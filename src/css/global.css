@@ -29,11 +29,12 @@
   --cmax: hsl(0, 0%, 100%);
   --bg: var(--c100);
   --fg: var(--c00);
-  --accent-1: hsl(180, 100%, 19%);
-  --accent-2: hsl(180, 50%, 40%);
-  --accent-3: hsl(180, 40%, 69%);
-  --accent-4: hsl(180, 32%, 77%);
-  --accent-5: hsl(180, 20%, 85%);
+  /* Fork (Zovo Styles): brand violet ramp (was upstream teal hue 180) */
+  --accent-1: hsl(255, 65%, 30%);
+  --accent-2: hsl(255, 55%, 48%);
+  --accent-3: hsl(255, 45%, 72%);
+  --accent-4: hsl(255, 38%, 79%);
+  --accent-5: hsl(255, 28%, 88%);
   --gold1: gold;
   --header-bg: var(--c97);
   --red1: hsl(0, 70%, 45%);

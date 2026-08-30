@@ -1,6 +1,7 @@
 import {BIT_DARK, BIT_SYS_DARK, kDark} from '@/js/consts';
 import * as prefs from '@/js/prefs';
 import {debounce, isCssDarkScheme} from '@/js/util';
+import {P_SITE_SCHEMES} from '../zvst/constants';
 import {broadcastExtension} from './broadcast';
 import {bgBusy, bgPreInit, onSchemeChange} from './common';
 import {stateDB} from './db';
@@ -66,10 +67,43 @@ prefs.subscribe(kSTATE, (_, val) => {
 }, true);
 
 /** @param {StyleObj} _ */
-export function themeAllowsStyle({preferScheme: ps}) {
+export function themeAllowsStyle({preferScheme: ps}, url) {
+  // Fork (Zovo Styles): a per-site dark/light override beats the global switcher.
+  const ovr = url && siteSchemeOverride(url);
+  if (ovr)
+    return ps !== kDark && ps !== kLight || ovr === ps;
   return prefState === kNever ||
     ps !== kDark && ps !== kLight ||
     isDark === (ps === kDark);
+}
+
+/**
+ * Fork (Zovo Styles): per-site override for `url`'s host, else null.
+ * Matches the exact host and its parent domains ("www.example.com" sees an
+ * "example.com" override), the same spirit as section domain matching.
+ */
+export function siteSchemeOverride(url) {
+  let host;
+  try {
+    host = new URL(url).hostname.toLowerCase();
+  } catch {
+    return null;
+  }
+  const map = prefs.__values[P_SITE_SCHEMES];
+  if (!host || !map) return null;
+  for (let h = host; h;) {
+    const v = map[h];
+    if (v === kDark || v === kLight) return v;
+    const dot = h.indexOf('.');
+    h = dot > 0 ? h.slice(dot + 1) : '';
+  }
+  return null;
+}
+
+/** Effective dark flag for a URL, honoring per-site overrides. */
+export function isDarkFor(url) {
+  const ovr = siteSchemeOverride(url);
+  return ovr ? ovr === kDark : !!isDark;
 }
 
 function calcTime(key) {

@@ -60,6 +60,12 @@ const defaults = {
   'schemeSwitcher.enabled': 'system',
   'schemeSwitcher.nightStart': '18:00',
   'schemeSwitcher.nightEnd': '06:00',
+  /** Fork (Zovo Styles): per-site dark/light overrides, {host: 'dark'|'light'}.
+   * Consulted by background/color-scheme.js::themeAllowsStyle. */
+  'zls.siteSchemes': {},
+  /** Fork (Zovo Styles): license layer 5.95 — key + server-verified grace cache. */
+  'zls.licenseKey': '',
+  'zls.licenseCache': null,
 
   'popup.enabledFirst': true,     // display enabled styles before disabled styles
   'popup.stylesFirst': true,      // display enabled styles before disabled styles

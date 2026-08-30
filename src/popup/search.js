@@ -117,7 +117,7 @@ styleFinder.inSite = event => {
   const where = event.detail;
   const q = encodeURIComponent($id('search-query').value.trim());
   const isStylus = category === STYLUS_CATEGORY;
-  const cat = isStylus ? 'Stylus' : category;
+  const cat = isStylus ? 'Zovo Styles' : category;
   const andQ = add('&q=', q);
   const catQ = cat + add('+', q);
   const href =

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title i18n="+optionsHeading">Stylus </title>
+  <title i18n="+optionsHeading">Zovo Styles </title>
 
   <%= htmlWebpackPlugin.tags.headTags %>
 
@@ -345,6 +345,22 @@
       <div class="block" id="FOUC">
         <h2 i18n="optionFOUC"></h2>
         <div class="items no-stretch"></div>
+      </div>
+
+      <div class="block" id="zls-pro-block">
+        <h2>Pro</h2>
+        <div class="items no-stretch">
+          <p id="zls-pro-status">Checking plan…</p>
+          <p id="zls-pro-blurb">Pro adds the editor power tools: one-click lint auto-fix and everything that lands in Pro later.</p>
+          <div id="zls-pro-form">
+            <input id="zls-key" type="text" spellcheck="false" maxlength="23"
+                   placeholder="ZOVO-XXXX-XXXX-XXXX-XXXX" aria-label="License key">
+            <button id="zls-activate">Activate</button>
+            <button id="zls-deactivate" hidden>Deactivate</button>
+            <a href="https://zovo.one/pricing" target="_blank" rel="noopener" id="zls-get-pro">Get Pro →</a>
+          </div>
+          <p id="zls-pro-err" role="alert"></p>
+        </div>
       </div>
 
     </main>

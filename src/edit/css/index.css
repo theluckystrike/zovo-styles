@@ -10,3 +10,24 @@
 @import 'util.css';
 @import 'compact.css';
 @import '../../css/target-site.css';
+
+/* Fork (Zovo Styles): Pro auto-fix button in the lint panel */
+#zls-autofix {
+  margin-left: 8px;
+  padding: 1px 10px 2px;
+  border: 1px solid var(--c60, #0004);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+#zls-autofix:hover {
+  background: var(--c80, #0002);
+}
+#zls-autofix .zls-badge {
+  font-size: 9px;
+  color: #b58a00;
+  font-weight: 700;
+}

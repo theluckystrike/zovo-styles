@@ -222,7 +222,7 @@ function hideInfo() {
 /** @this {MessageBox} */
 function showInfo(box) {
   const el = box.firstChild;
-  const wikiUrl = 'https://github.com/openstyles/stylus/wiki/Popup';
+  const wikiUrl = 'https://github.com/theluckystrike/zovo-styles#popup';
   const a = $createLink({
     href: wikiUrl,
     title: __.B_CHROME || __.B_ANY && CHROME

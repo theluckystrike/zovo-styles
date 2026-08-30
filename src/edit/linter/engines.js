@@ -61,3 +61,6 @@ async function getConfig(name) {
   configs.set(name, cfg);
   return cfg;
 }
+
+/** Fork (Zovo Styles): expose the resolved config for the auto-fix action. */
+export const getLinterConfig = name => configs.get(name) || getConfig(name);

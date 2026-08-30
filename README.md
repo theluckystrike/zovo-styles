@@ -1,3 +1,32 @@
+# Zovo Styles
+
+**Zovo Styles** is a fork of [Stylus](https://github.com/openstyles/stylus)
+(GPL-3.0-only), rebranded and extended by Zovo. See [CHANGES.md](CHANGES.md)
+for the complete statement of fork changes. Upstream's no-analytics
+principle is absolute here: zero telemetry, zero style-data collection.
+
+Fork additions on top of upstream Stylus 2.4.11:
+
+* **Curated starter theme pack** for top sites (one-click install from the manager or popup).
+* **Per-site dark/light variant switcher** in the popup (overrides the global scheme switcher per site).
+* **One-click full backup/restore** to a single JSON file (styles + settings + site variants; restores Stylus backups too).
+* **Pro editor power tools**: one-click lint auto-fix in the style editor. Unlock with a `ZOVO-XXXX-XXXX-XXXX-XXXX` license key ([pricing](https://zovo.one/pricing)).
+
+## Build
+
+```sh
+pnpm install
+pnpm run build-chrome-mv3   # output: dist-chrome-mv3/
+```
+
+For a build with license verification enabled, set `SUPABASE_ANON_KEY`
+(the publishable anon key) in the environment first. Without it the build
+succeeds and the license layer fails closed to the free plan.
+
+---
+
+# Stylus (upstream README)
+
 Stylus is a browser extension to restyle the websites via CSS themes, compatible with Chrome, Firefox, and any Chromium-based browsers.
 
 ## Highlights

@@ -115,6 +115,16 @@ async function importFromString(jsonString) {
   let json = JSON.parse(jsonString) || [];
   if (json._rev && json._rev === json.doc?._rev)
     json = [json.doc];
+  // Fork (Zovo Styles): the one-click full backup envelope restores through
+  // the background API (styles + settings + order + site variants).
+  if (json && json.kind === 'full-backup' && Array.isArray(json.styles)) {
+    const res = await API.zls.importFullBackup(json);
+    messageBox.alert(
+      `Backup restored: ${res.imported} style${res.imported === 1 ? '' : 's'} imported` +
+      (res.failed ? `, ${res.failed} failed` : '') +
+      (res.settings ? ', settings applied.' : '.'));
+    return;
+  }
   const oldStyles = Array.isArray(json) && json.length ? await API.styles.getAll() : [];
   const oldStylesSet = new Set(oldStyles.sort((a, b) =>
     (a = a.customName || a.name).toLowerCase() <

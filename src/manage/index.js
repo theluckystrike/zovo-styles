@@ -15,6 +15,7 @@ import {showStyles} from './render';
 import * as router from './router';
 import * as sorter from './sorter';
 import UpdateHistory from './updater-ui';
+import initZvstManage from './zvst-manage';
 import {UI} from './util';
 import './events';
 import './incremental-search';
@@ -45,6 +46,7 @@ import '@/css/target-site.css';
     console.log(badStyles);
   }
   initSyncButton(data.sync || {});
+  initZvstManage();
   import('./import-export');
 })();
 

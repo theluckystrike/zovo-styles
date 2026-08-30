@@ -3,8 +3,8 @@
   --knob: 12px;
   --pad: 0px;
   --color-off: hsla(0, 0%, 50%, .35);
-  --color-on: hsla(180, 50%, 40%, .33);
-  --shadow-hsl: 180, 50%, 10%;
+  --color-on: hsla(255, 60%, 50%, .5); /* fork: brand violet (was teal) */
+  --shadow-hsl: 255, 45%, 18%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -57,6 +57,6 @@
   }
   :root[data-ui-theme="dark"] & {
     --color-off: hsla(0, 0%, 50%, 0.6);
-    --color-on: hsla(180, 50%, 60%, .3);
+    --color-on: hsla(255, 65%, 65%, .4); /* fork: brand violet (was teal) */
   }
 }

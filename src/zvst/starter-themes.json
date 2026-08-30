@@ -1,0 +1,58 @@
+[
+  {
+    "id": "g-search-midnight",
+    "name": "Google Search — Midnight",
+    "blurb": "Soft dark results page, easy on the eyes at night.",
+    "domains": ["google.com"],
+    "code": "/* Google Search — Midnight (Zovo Styles starter) */\n:root { color-scheme: dark; }\nbody, html { background: #0f1115 !important; color: #e6e6ea !important; }\n#search, #rso, #center_col, #appbar { background: transparent !important; }\na, a:link { color: #8ab4f8 !important; }\na:visited { color: #b39ddb !important; }\ninput[type=\"text\"], textarea, .gLFyf { background: #1c1f26 !important; color: #e6e6ea !important; border-color: #333945 !important; }\n#searchform, header, nav { background: #0f1115 !important; }\ndiv.g, .MjjYud { background: transparent !important; }\n.hlcw0c, .cUnQKe, .wM6W7d { background: #161920 !important; }\n#foot, #footer, .fbar { background: #161920 !important; }\nimg, video { opacity: .92; }\n"
+  },
+  {
+    "id": "youtube-midnight",
+    "name": "YouTube — Midnight",
+    "blurb": "True-dark YouTube with softened contrast for long sessions.",
+    "domains": ["youtube.com"],
+    "code": "/* YouTube — Midnight (Zovo Styles starter) */\n:root { color-scheme: dark; }\nhtml[dark], body { background: #0b0d10 !important; }\nytd-app, ytd-watch-flexy, ytd-browse { background: #0b0d10 !important; color: #e8e8ec !important; }\n#container.ytd-masthead, ytd-masthead { background: #0b0d10 !important; }\nytd-guide-renderer, #guide-wrapper { background: #101318 !important; }\n.yt-spec-button-shape-next--filled, #search-input { background: #1a1e24 !important; color: #e8e8ec !important; }\na, .yt-formatted-string { color: inherit; }\n.yt-core-attributed-string--link-inherit-color a { color: #9ec1ff !important; }\nytd-comment-thread-renderer, ytd-comments { background: transparent !important; }\n"
+  },
+  {
+    "id": "github-dimmed",
+    "name": "GitHub — Dimmed Slate",
+    "blurb": "Dimmed slate palette for GitHub; code stays crisp.",
+    "domains": ["github.com"],
+    "code": "/* GitHub — Dimmed Slate (Zovo Styles starter) */\n:root { color-scheme: dark; }\nbody { background: #0d1117 !important; color: #c9d1d9 !important; }\n.Header, .header-old { background: #161b22 !important; }\n.Box, .box, .border { background: #161b22 !important; border-color: #2d333b !important; }\n.markdown-body, .blob-wrapper { background: #0d1117 !important; color: #c9d1d9 !important; }\na, .Link--primary { color: #6cb6ff !important; }\n.btn, .btn-primary { background: #21262d !important; color: #c9d1d9 !important; border-color: #373e47 !important; }\n"
+  },
+  {
+    "id": "reddit-night",
+    "name": "Reddit — Night Owl",
+    "blurb": "Calm night theme for the current Reddit layout.",
+    "domains": ["reddit.com"],
+    "code": "/* Reddit — Night Owl (Zovo Styles starter) */\n:root { color-scheme: dark; }\nbody, shreddit-app { background: #0c0e12 !important; color: #e2e4e9 !important; }\n#header, header { background: #12151b !important; }\nshreddit-post, article, .Post { background: #12151b !important; }\na { color: #7aa7ff !important; }\nbutton, input, textarea { color: #e2e4e9 !important; }\nfaceplate-panel, #right-sidebar-container { background: #0c0e12 !important; }\n"
+  },
+  {
+    "id": "x-midnight",
+    "name": "X — Midnight Blue",
+    "blurb": "Deep blue-black timeline, gentler than pure black.",
+    "domains": ["x.com", "twitter.com"],
+    "code": "/* X — Midnight Blue (Zovo Styles starter) */\n:root { color-scheme: dark; }\nbody { background: #0a1020 !important; color: #e7e9ea !important; }\nmain, [data-testid=\"primaryColumn\"] { background: #0a1020 !important; }\nheader[role=\"banner\"], nav { background: rgba(10,16,32,.92) !important; }\n[data-testid=\"cellInnerDiv\"] { background: transparent !important; }\na { color: #6ea8ff !important; }\n[aria-label][role=\"button\"] { color: inherit; }\n"
+  },
+  {
+    "id": "wikipedia-sepia-dark",
+    "name": "Wikipedia — Night Paper",
+    "blurb": "Warm dark reading mode for long articles.",
+    "domains": ["wikipedia.org"],
+    "code": "/* Wikipedia — Night Paper (Zovo Styles starter) */\n:root { color-scheme: dark; }\nbody, #content, .mw-body { background: #131418 !important; color: #e8e3d9 !important; }\n.vector-header, .mw-page-container { background: #131418 !important; }\n.mw-body-content a, a:link { color: #9db9e8 !important; }\na:visited { color: #b39ddb !important; }\n.infobox, .navbox, table, .thumbinner { background: #1b1d22 !important; color: #e8e3d9 !important; border-color: #33363d !important; }\n.mw-editsection, .toc { filter: brightness(.95); }\n"
+  },
+  {
+    "id": "stackoverflow-dark",
+    "name": "Stack Overflow — After Dark",
+    "blurb": "Dark Q&A pages with high-contrast code blocks.",
+    "domains": ["stackoverflow.com", "stackexchange.com", "superuser.com", "serverfault.com", "askubuntu.com"],
+    "code": "/* Stack Overflow — After Dark (Zovo Styles starter) */\n:root { color-scheme: dark; }\nbody { background: #111418 !important; color: #d6d9dc !important; }\nheader, .top-bar { background: #181c20 !important; }\n.question-summary, .s-post-summary, .post-layout { background: transparent !important; }\npre, code, .s-code-block { background: #1c2126 !important; color: #e3e6e8 !important; }\na, .s-link { color: #7fb3ff !important; }\n.s-card, .sidebar, #sidebar { background: #15181d !important; border-color: #2b3138 !important; }\n"
+  },
+  {
+    "id": "amazon-evening",
+    "name": "Amazon — Evening",
+    "blurb": "Muted dark storefront; product images untouched.",
+    "domains": ["amazon.com"],
+    "code": "/* Amazon — Evening (Zovo Styles starter) */\n:root { color-scheme: dark; }\nbody { background: #101317 !important; color: #e3e6e8 !important; }\n#navbar, #nav-belt, #nav-main { background: #171c22 !important; }\n.s-card-container, .a-cardui, .a-section { background: #15191f !important; color: #e3e6e8 !important; }\na, a:link { color: #7fb0e8 !important; }\ninput[type=\"text\"], #twotabsearchtextbox { background: #1e242b !important; color: #e3e6e8 !important; }\n"
+  }
+]

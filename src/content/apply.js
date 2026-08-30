@@ -180,6 +180,12 @@ function applyOnMessage(req, sender, multi) {
       updateConfig(req);
       break;
 
+    case 'zlsRequery':
+      // Fork (Zovo Styles): a per-site scheme override changed — re-query
+      // everything so scheme-gated styles apply/unapply immediately.
+      if (!isUnstylable) applyStyles();
+      break;
+
     case 'backgroundReady':
       // This may happen when restarting the background script without reloading the extension
       if (own.sections) updateCount();

@@ -35,7 +35,7 @@ export function create(url, cache, maybe, tabOvr) {
     }
     style = stylePreviewMap.get(id) || style;
     if (style.enabled
-      && themeAllowsStyle(style)
+      && themeAllowsStyle(style, url)
       && (!(v = style[kExclusions]) || !v.length || !v.some(urlMatchOverride, query))
       && (!(v = style[kInclusions]) || !v.length || (isIncluded = v.some(urlMatchOverride, query))
         || !style[kOverridden])

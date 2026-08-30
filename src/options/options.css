@@ -230,7 +230,12 @@ label.disabled + .sites {
 }
 
 #FOUC h2 {
-  color: var(--red1);
+  color: inherit;
+  font-weight: 600;
+}
+#FOUC h2::before {
+  content: "ⓘ ";
+  color: var(--gold1, darkgoldenrod);
 }
 
 footer {
@@ -308,5 +313,40 @@ a.icon {
   }
 }
 .sync-options:not([data-enabled]) > div > :not(.select-wrapper) {
+  display: none;
+}
+
+/* Fork (Zovo Styles): Pro block */
+#zls-pro-block #zls-key {
+  font-family: ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  padding: 6px 8px;
+  border: 1px solid var(--c60, #0004);
+  border-radius: 6px;
+  min-width: 240px;
+  background: var(--bg, #fff);
+  color: var(--fg, inherit);
+}
+#zls-pro-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#zls-pro-err {
+  color: #c03535;
+  min-height: 1em;
+  margin: 4px 0 0;
+}
+#zls-get-pro {
+  font-weight: 600;
+  background: #f59e0b;
+  color: #1a1a2e;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+#zls-get-pro[hidden] {
   display: none;
 }

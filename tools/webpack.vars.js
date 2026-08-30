@@ -54,6 +54,10 @@ const VARS = {
   PAGE_BG: PAGE_BG.split('/').pop(),
   PREFS: 'prefs', // hiding the global from IDE
   ZIP: !!ZIP,
+  // Fork (Zovo Styles): publishable anon key for the license-verify endpoint,
+  // injected ONLY from the build environment — never committed (layer 5.95).
+  // Empty string builds fine; license verify then fails CLOSED to free.
+  SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY || '',
 };
 const DEBUG_MODE = {
   GENERAL: 1,

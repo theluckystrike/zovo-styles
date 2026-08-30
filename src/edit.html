@@ -38,11 +38,11 @@
           <i class=i-external></i>
         </a>
         <a class="icon" target="_blank" i18n="title:linkStylusWiki"
-           href="https://github.com/openstyles/stylus/wiki/Writing-styles">
+           href="https://github.com/theluckystrike/zovo-styles#writing-styles">
           <i class=i-documentation></i>
         </a>
         <a class="usercss-only icon" target="_blank" id="usercss-docs"
-           href="https://github.com/openstyles/stylus/wiki/Writing-UserCSS"
+           href="https://github.com/theluckystrike/zovo-styles#writing-usercss"
            i18n="title:externalUsercssDocument">
         </a>
         <a class="icon" id="preview-error" target="_blank" hidden>
@@ -155,6 +155,8 @@
                  show-if="editor.linter.on">
                 <i class=i-config-lite></i>
               </a>
+              <button id="zls-autofix" class="zls-pro-btn" show-if="editor.linter.on"
+                      title="Apply safe lint fixes (Pro)">Auto-fix <span class="zls-badge">Pro</span></button>
             </h2>
           </summary>
           <div class="lint-report-container"></div>

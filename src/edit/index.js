@@ -18,6 +18,7 @@ import './colorpicker-helper';
 import USWIntegration from './usw-integration';
 import {HOTKEYS, openHotkeyPopup} from './util';
 import './windowed-mode';
+import initAutofix from './zvst-autofix';
 import './css/index.css';
 
 (async () => {
@@ -43,6 +44,7 @@ import './css/index.css';
   $('#lint-help').onclick = showLintHelp;
   $('#linter-settings').onclick =
   $('#lint .config').onclick = showLintConfig;
+  initAutofix();
   // $id('testRE').hidden = !editor.style.sections.some(({regexps: r}) => r && r.length);
   const elSec = $id('sections-list');
   const elToc = $id('toc');

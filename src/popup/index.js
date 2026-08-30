@@ -13,6 +13,7 @@ import {getActiveTab, ignoreChromeError} from '@/js/util-webext';
 import {openStyleFinder, pSideFinder, selUnstylable} from './events';
 import {initHotkeys} from './hotkeys';
 import {createWriterElement, showStyles, updateStateIcon} from './render';
+import initZvstBar from './zvst-popup';
 import './popup.css';
 
 const WRITE_FRAME_SEL = '.match:not([data-frame-id="0"]):not(.dupe)';
@@ -100,6 +101,7 @@ async function initPopup({frames, ping0, tab, urlSupported}) {
   tabId = tab.id;
   tabUrl = frames[0].url;
   tabUrlSupported = urlSupported;
+  initZvstBar(tabUrl, urlSupported);
   windowId = tab.windowId;
   frames.forEach(createWriterElement);
 

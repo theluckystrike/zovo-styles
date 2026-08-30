@@ -18,6 +18,9 @@
     background: linear-gradient(var(--colorview-swatch), var(--colorview-swatch)), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAJElEQVQYV2NctWrVfwYkEBYWxojMZ6SDAmT7QGx0K1EcRBsFAADeG/3M/HteAAAAAElFTkSuQmCC");
     background-repeat: repeat;
     background-position: center;
+    /* fork: hairline so near-white swatches don't read as tofu boxes */
+    border: 1px solid hsla(0, 0%, 50%, .45);
+    border-radius: 3px;
     border: 1px solid #8e8e8e;
   }
   &::before {

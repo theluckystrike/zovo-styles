@@ -37,7 +37,8 @@ async function maybeRestore() {
   const popup = showCodeMirrorPopup(info, '', {value, readOnly: true});
   const buttons = [t('confirmYes'), t('confirmNo')].map((btn, i) =>
     $create('button', {onclick: i ? onNo : onYes}, btn));
-  popup.className += ' danger';
+  // Fork (Zovo Styles): neutral brand header — recovery is not an error state
+  popup.className += ' zls-draft';
   popup.onClose.add(onNo);
   popup._contents.append(
     $create('p', t('draftAction')),

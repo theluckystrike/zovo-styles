@@ -165,10 +165,25 @@ body {
 
 #no-styles {
   cursor: default;
-  padding: $pad;
+  padding: calc($pad * 2) $pad;
+  text-align: center;
   &:hover {
     color: var(--accent-1);
   }
+}
+/* Fork (Zovo Styles): real empty state instead of a bare label */
+#no-styles .zls-empty-icon {
+  display: block;
+  margin: 0 auto 8px;
+  border-radius: 10px;
+}
+#no-styles .zls-empty-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+#no-styles b {
+  font-weight: 500;
+  color: var(--accent-2);
 }
 
 .style-name:hover input:is(:checked, *) {
@@ -829,4 +844,77 @@ a:hover i {
   > div {
     max-height: none;
   }
+}
+
+/* Fork (Zovo Styles): footer bar — site variant switcher + backup + themes */
+#zls-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px 8px 6px;
+  border-top: 1px solid var(--c80, #0003);
+  font-size: 12px;
+}
+#zls-bar .zls-seg-btn {
+  padding: 3px 9px;
+}
+#zls-scheme {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+#zls-scheme-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  opacity: .65;
+  white-space: nowrap;
+}
+.zls-seg {
+  display: inline-flex;
+  border: 1px solid var(--c60, #0004);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.zls-seg-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  padding: 3px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  min-width: 40px;
+  max-width: none;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+.zls-seg-btn.zls-on {
+  background: #5a3fd6;
+  color: #fff;
+}
+#zls-actions {
+  display: flex;
+  gap: 10px;
+}
+#zls-actions a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 600;
+}
+#zls-actions a:hover {
+  text-decoration: underline;
+}
+#zls-pro {
+  color: #b58a00;
+}
+.zls-badge {
+  font-size: 10px;
+  vertical-align: super;
+  opacity: .8;
 }

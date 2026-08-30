@@ -65,7 +65,8 @@
   </div>
 
   <div id="no-styles" class="if-no-styles if-not-blocked">
-    <div i18n="noStylesForSite"></div>
+    <img src="icon/128.png" alt="" width="40" height="40" class="zls-empty-icon">
+    <div class="zls-empty-title" i18n="noStylesForSite"></div>
     <b i18n="findStylesOnline"></b>
   </div>
 
@@ -133,6 +134,22 @@
         <text y="100%">⚙</text>
       </svg>
     </a>
+  </div>
+
+  <div id="zls-bar">
+    <div id="zls-scheme" class="if-not-blocked" role="group" aria-label="Site theme variant">
+      <span id="zls-scheme-label">This site</span>
+      <div class="zls-seg">
+        <button data-zls-scheme="" class="zls-seg-btn">Auto</button
+        ><button data-zls-scheme="dark" class="zls-seg-btn">Dark</button
+        ><button data-zls-scheme="light" class="zls-seg-btn">Light</button>
+      </div>
+    </div>
+    <div id="zls-actions">
+      <a id="zls-starters" href="manage.html#zls-starters" title="Curated starter themes">Themes</a>
+      <a id="zls-backup" tabindex="0" title="Back up all styles and settings to one file">Backup</a>
+      <a id="zls-pro" tabindex="0" hidden>Pro</a>
+    </div>
   </div>
 </template>
 <template data-id="menu">

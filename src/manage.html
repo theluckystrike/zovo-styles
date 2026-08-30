@@ -248,7 +248,18 @@
             <button id="export" i18n="exportLabel"></button
             ><button class="split-btn-pedal" i18n="menu-compat:exportCompatible"></button>
           </span>
+          <button id="zls-oneclick" title="Everything — styles, settings, site variants — in a single file">1-click backup</button>
           <p></p>
+        </div>
+
+        <div class="settings-column" id="zls-starters">
+          <details data-pref="zls.starters.expanded" open>
+            <summary>Starter themes — curated pack for top sites</summary>
+            <main>
+              <p class="zls-starters-blurb">Hand-tuned starter themes. Install any with one click; they behave like normal styles afterwards.</p>
+              <div id="zls-starter-list"></div>
+            </main>
+          </details>
         </div>
       </main>
     </div>
@@ -259,9 +270,7 @@
         <main><% _.forEach([
           ['userstyles.world/explore', /*i18n*/'linkGetShareStyles'],
           ['uso.kkx.one/browse/styles', /*i18n*/'linkGetStyles'],
-          ['github.com/openstyles/stylus/wiki', /*i18n*/'linkGetHelp'],
-          ['github.com/openstyles/stylus', , 'GitHub'],
-          ['explore.transifex.com/github-7/Stylus/', /*i18n*/'linkTranslate'],
+          ['github.com/theluckystrike/zovo-styles', , 'GitHub'],
         ], ([url, tl, text]) => { if (tl) { %>
           <a href="https://<%= url %>" target="_blank" class="target" i18n="<%= tl %>"></a>
         <% } else { %>
@@ -284,6 +293,15 @@
 </div>
 
 <div id="installed"></div>
+<div id="zls-empty" hidden>
+  <img src="icon/128.png" alt="" width="64" height="64">
+  <h2>No styles yet</h2>
+  <p>Install a curated starter theme below, find themes online, or write your own CSS.</p>
+  <div class="zls-empty-actions">
+    <a href="#zls-starters" id="zls-empty-starters" class="zls-btn-primary">Browse starter themes</a>
+    <a href="edit.html" class="zls-btn-ghost">Write new style</a>
+  </div>
+</div>
 
 </template>
 </head>

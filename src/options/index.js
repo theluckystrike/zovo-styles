@@ -13,6 +13,7 @@ import {favicon, usoa, usw} from '@/js/urls';
 import {clamp, getHost, NOP, t} from '@/js/util';
 import {browserSidebar} from '@/js/util-webext';
 import './options-sync';
+import initZvstOptions from './zvst-options';
 import '@/css/onoffswitch.css';
 import './options.css';
 
@@ -20,6 +21,7 @@ $$('input[min], input[max]').forEach(enforceInputRange);
 if (location.hash === '#sync-styles') {
   $('.cloud-name').focus();
 }
+initZvstOptions();
 $('#FOUC .items').textContent = t(__.MV3 ? 'optionFOUCMV3' : 'optionFOUCMV2', [
   t('optionsAdvancedStyleViaXhr'),
   t('optionKeepAlive'),

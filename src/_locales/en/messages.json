@@ -307,7 +307,7 @@
     "description": "Option text for the user to sort the style by last update date"
   },
   "dbError": {
-    "message": "An error has occurred using the Stylus database",
+    "message": "An error has occurred using the Zovo Styles database",
     "description": "Prompt when a DB error is encountered"
   },
   "defaultTheme": {
@@ -323,7 +323,7 @@
     "description": "Label for the button to delete a style"
   },
   "description": {
-    "message": "Redesign the web with Stylus, a user styles manager. Stylus allows you to easily install themes and skins for many popular sites.",
+    "message": "Redesign the web with Zovo Styles, a user styles manager. Install themes and skins for many popular sites, tweak them in a live editor, and keep everything on your device.",
     "description": "Extension description"
   },
   "disableAllStyles": {
@@ -343,7 +343,7 @@
     "description": "Displayed in the editor after the browser/extension crashed"
   },
   "draftTitle": {
-    "message": "Draft recovery, created $date$",
+    "message": "Draft recovered from $1",
     "placeholders": {
       "date": {
         "content": "$1"
@@ -1113,7 +1113,7 @@
     "description": "Label for the checkbox that toggles showing icons for style's target sites in various parts of UI"
   },
   "optionTargetIconsNote": {
-    "message": "Stylus uses an external service $SRV$",
+    "message": "Zovo Styles uses an external service $SRV$",
     "description": "Label for the checkbox that toggles icons, $SRV$ is replaced with the actual service name",
     "placeholders": {
       "SRV": {
@@ -1220,7 +1220,7 @@
     "message": "Reset options"
   },
   "optionsStylusThemes": {
-    "message": "Click the Stylus icon in the browser toolbar on any Stylus page including this one, then click 'Find styles'"
+    "message": "Click the Zovo Styles icon in the browser toolbar on any Zovo Styles page including this one, then click 'Find styles'"
   },
   "optionsSyncConnect": {
     "message": "Connect"
@@ -1324,7 +1324,7 @@
     "message": "Total pages"
   },
   "parseUsercssError": {
-    "message": "Stylus failed to parse UserCSS:",
+    "message": "Zovo Styles failed to parse UserCSS:",
     "description": "The error message to show when stylus failed to parse UserCSS"
   },
   "popupAutoResort": {
@@ -1425,7 +1425,7 @@
     "message": "Try disconnecting then publish again"
   },
   "publishRetry": {
-    "message": "Stylus is still trying to publish this style, but you can retry if you see no authentication activity or popups. Retry now?"
+    "message": "Zovo Styles is still trying to publish this style, but you can retry if you see no authentication activity or popups. Retry now?"
   },
   "publishStyle": {
     "message": "Publish style",
@@ -1592,7 +1592,7 @@
     "message": "Define keyboard shortcuts"
   },
   "shortcutsNoteFF": {
-    "message": "In Firefox 66+ you can open the built-in shortcuts UI manually:\n1) right-click the Stylus icon in the toolbar and choose 'Manage'\n(alternatively, open about:addons via the main menu or Ctrl-Shift-A),\n2) in the page that opens, click the cog wheel icon in the top right corner,\n3) choose 'Manage extension shortcuts'.\n\nYou can also customize the shortcuts here."
+    "message": "In Firefox 66+ you can open the built-in shortcuts UI manually:\n1) right-click the Zovo Styles icon in the toolbar and choose 'Manage'\n(alternatively, open about:addons via the main menu or Ctrl-Shift-A),\n2) in the page that opens, click the cog wheel icon in the top right corner,\n3) choose 'Manage extension shortcuts'.\n\nYou can also customize the shortcuts here."
   },
   "sitesNoteRe": {
     "description": "Tooltip for an option. Make sure to preserve newlines, <>, and the text inside as it'll be reformatted on screen",
@@ -1864,7 +1864,7 @@
     "message": "Update URL"
   },
   "stylusUnavailableForURL": {
-    "message": "Stylus doesn't work on pages like this.",
+    "message": "Zovo Styles doesn't work on pages like this.",
     "description": "Note in the toolbar pop-up when on a URL Stylus can't affect"
   },
   "stylusUnavailableForURLdetails": {
@@ -1884,7 +1884,7 @@
     }
   },
   "syncErrorRelogin": {
-    "message": "Sync failed. Try logging in again in the Stylus options.",
+    "message": "Sync failed. Try logging in again in the Zovo Styles options.",
     "description": "Tooltip for the toolbar icon"
   },
   "syncStorageErrorSaving": {
@@ -1929,7 +1929,7 @@
     "description": "Note in the popup when opened on addons.mozilla.org in Firefox >= 59"
   },
   "unreachableCSP": {
-    "message": "Try enabling \"$optCSP$\" in Stylus options.",
+    "message": "Try enabling \"$optCSP$\" in Zovo Styles options.",
     "description": "Note in the popup when opened on a site with CSP that breaks injection in Firefox, $optCSP$ is replaced with translation for optionsAdvancedPatchCsp",
     "placeholders": {
       "optCSP": {
@@ -1942,7 +1942,7 @@
     "description": "Note in the toolbar popup usually on file:// URLs after [re]loading Stylus"
   },
   "unreachableFileHint": {
-    "message": "Stylus can access file:// URLs only if you enable the corresponding checkbox for Stylus extension on chrome://extensions page.",
+    "message": "Zovo Styles can access file:// URLs only if you enable the corresponding checkbox for Zovo Styles extension on chrome://extensions page.",
     "description": "Note in the toolbar popup for file:// URLs"
   },
   "unreachableMozSiteHint": {
@@ -1954,7 +1954,7 @@
     "description": "Note in the popup when opened on a restricted mozilla site in Firefox < 59"
   },
   "unreachableOpera": {
-    "message": "Opera users: if this is your search page please enable \"[x] Allow access to search page results\" in ⭕ menu 🞂 Extensions 🞂 Extensions 🞂 Stylus."
+    "message": "Opera users: if this is your search page please enable \"[x] Allow access to search page results\" in ⭕ menu 🞂 Extensions 🞂 Extensions 🞂 Zovo Styles."
   },
   "updateAllCheckSucceededNoUpdate": {
     "message": "No updates found.",

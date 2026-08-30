@@ -120,7 +120,7 @@ export function setErrorBadge(text) {
     }
   }
   browserAction.setTitle({
-    title: text || 'Stylus', // in Chrome an empty title is seemingly ignored
+    title: text || 'Zovo Styles', // in Chrome an empty title is seemingly ignored
   }).catch(NOP);
 }
 
