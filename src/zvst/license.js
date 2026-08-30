@@ -1,6 +1,6 @@
 /**
  * zvst/license.js — license verification for the Zovo Styles fork.
- * GPL-3.0-only. Port of the fleet canonical layer 5.95 (frozen zovo-license
+ * GPL-3.0-only. Port of the fleet canonical layer 5.95 (frozen license
  * contract, ScheduledHistoryCleaner/PaperFetch/Zovo-Night lineage).
  *
  * Grant semantics (HARD invariants — fleet licensing standard 2026-08-19 §5):

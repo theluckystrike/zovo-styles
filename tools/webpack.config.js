@@ -227,7 +227,9 @@ module.exports = [
             ['csslint-mod/dist/csslint.js', 'csslint.js', true],
             ['csslint-mod/dist/parserlib.js', 'parserlib.js', true],
             ['stylelint-bundle', 'stylelint.js'],
-            ['stylus-lang-bundle/dist/stylus-lang-bundle.min.js', 'stylus-lang.js', 0, patchStylus],
+            // Fork (Zovo Styles): stylus-lang compiler bundle REMOVED — eval-based,
+            // blocked by MV3 CSP and the CWS dynamic-code rule.
+
           ].flatMap(([npm, to, mod, patch]) => [{
             transform: mod
               ? transESM2var
@@ -298,7 +300,9 @@ module.exports = [
   makeContentScript('hook-uso.js'),
   MV3 && makeContentScript('hook-uso-page-mv3.js'),
   makeLibrary('@/js/worker', undefined, {ENTRY: 'worker'}),
-  makeLibrary({less: 'less/lib/less-browser/bootstrap'}, 'less'),
+  // Fork (Zovo Styles): LESS compiler bundle REMOVED — its eval/new Function
+  // core trips MV3 CSP and the CWS remote/dynamic-code rule. @preprocessor
+  // less now fails with a clear message (see src/js/worker/pre-less.js).
 ].filter(Boolean);
 
 module.exports.parallelism = 2;

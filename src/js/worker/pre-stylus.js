@@ -6,6 +6,9 @@ let sectionsTmp;
 let metaStrTmp, varsSep, varsUsed;
 
 export default function preStylus(code, metaStr, vars, sections, log, warn) {
+  // Fork (Zovo Styles): Stylus-language preprocessing removed (eval-based
+  // compiler bundle is not shippable under MV3 CSP / CWS dynamic-code rules).
+  throw new Error('Stylus preprocessing is not supported in this build; use plain CSS.');
   if (!stylusLang)
     loadStylusLang();
   if (!varsSep) {

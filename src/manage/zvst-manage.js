@@ -12,7 +12,7 @@ async function downloadFullBackup() {
   const blob = new Blob([JSON.stringify(data, null, 1)], {type: 'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `zovo-styles-backup-${stamp}.json`;
+  a.download = `zls-full-backup-${stamp}.json`;
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 10_000);
 }

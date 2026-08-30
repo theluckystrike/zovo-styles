@@ -323,7 +323,7 @@
     "description": "Label for the button to delete a style"
   },
   "description": {
-    "message": "Redesign the web with Zovo Styles, a user styles manager. Install themes and skins for many popular sites, tweak them in a live editor, and keep everything on your device.",
+    "message": "Redesign the web with Zovo Styles: install themes for popular sites, tweak them live, and keep everything on your device.",
     "description": "Extension description"
   },
   "disableAllStyles": {

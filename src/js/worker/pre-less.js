@@ -5,6 +5,10 @@ import {load} from './util';
 let less;
 
 export default function preLess(code, metaStr, vars, sections) {
+  // Fork (Zovo Styles): LESS support removed (eval-based compiler bundle is
+  // not shippable under MV3 CSP / CWS dynamic-code rules).
+  throw new Error('LESS preprocessing is not supported in this build; use plain CSS or Stylus syntax.');
+  /* eslint-disable no-unreachable */
   let resolve, reject;
   less ||= load('less.js', 'less');
   less.render(code, {

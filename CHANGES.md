@@ -62,6 +62,15 @@ switched from npm to pnpm because upstream's `preinstall` enforces it.
 - Pro gate UI: `src/zvst/pro-ui.js` (shared dialog), options-page Pro
   section (`src/options/zvst-options.js`), popup Pro chip.
 
+## Removed (MV3/CWS compliance)
+- **LESS and Stylus-language preprocessors removed.** Both compiler bundles
+  (`less.js`, `stylus-lang.js`) are eval/new Function-based, which is dead code
+  under MV3's `script-src 'self'` CSP and trips the CWS remote/dynamic-code
+  rule. `@preprocessor less|stylus` UserCSS styles now fail with a clear
+  message. Plain CSS (sectioned and UserCSS) is unaffected.
+- Backup file name is `zls-full-backup-<date>.json`; the backup envelope tag
+  is `app: "zls-styles"` (fleet namespace rules).
+
 ## Privacy
 - Zero telemetry, zero analytics, zero style-data collection. The only
   network calls are upstream's user-configured features (style update

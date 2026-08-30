@@ -124,7 +124,7 @@ const zlsApi = {
       Promise.resolve(styleMan.getAll()),
     ]);
     return {
-      app: 'zovo-styles',
+      app: 'zls-styles',
       kind: 'full-backup',
       version: 1,
       created: new Date().toISOString(),
