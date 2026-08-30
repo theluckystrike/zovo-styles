@@ -10,7 +10,7 @@
   &[data-connected] {
     > summary::marker,
     h2 {
-      color: hsl(180, 100%, 20%);
+      color: hsl(255, 70%, 32%); /* fork: violet (was teal) */
     }
     #usw-publish-style::after {
       content: attr(data-push);

@@ -86,9 +86,9 @@
 }
 .dirty #save-button {
   &, & + button {
-    background: linear-gradient(gold, orange);
-    border-color: darkgoldenrod;
-    color: #000;
+    background: linear-gradient(hsl(255, 60%, 55%), hsl(255, 65%, 45%));
+    border-color: hsl(255, 60%, 35%);
+    color: #fff;
   }
 }
 

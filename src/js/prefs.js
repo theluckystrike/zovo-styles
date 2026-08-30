@@ -165,7 +165,7 @@ const defaults = {
                                   // 1 = light-themed icon
                                   // -1 = match dark/light mode
   'badgeDisabled': '#8B0000',     // badge background color when disabled
-  'badgeNormal': '#006666',       // badge background color
+  'badgeNormal': '#5a3fd6',       // fork: brand violet (was upstream teal)
 
   /* Using separate values instead of a single {} to ensure type control.
    * Sub-key is the first word in the html's file name. */

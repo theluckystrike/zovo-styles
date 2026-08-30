@@ -861,3 +861,13 @@ button i {
   color: inherit;
   border: 1px solid var(--c80, #0003);
 }
+
+/* Fork (Zovo Styles): favicons of linked sites can be dark-on-dark (GitHub
+   octocat); give them a light chip in dark mode */
+@media screen and (prefers-color-scheme: dark) {
+  #links .target img {
+    background: #e8e8ea;
+    border-radius: 4px;
+    padding: 1px;
+  }
+}

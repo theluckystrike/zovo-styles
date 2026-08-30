@@ -39,6 +39,9 @@ main {
   background: var(--bg);
   overflow-y: auto;
   overscroll-behavior-y: contain;
+  /* fork: keep content clear of the sticky footer (Pro CTA was clipped) */
+  padding-bottom: 64px;
+  scroll-padding-bottom: 64px;
   @media (min-width: $docMin2W) {
     columns: 2;
     column-gap: 0;
@@ -232,6 +235,8 @@ label.disabled + .sites {
 #FOUC h2 {
   color: inherit;
   font-weight: 600;
+  hyphens: none;
+  overflow-wrap: normal;
 }
 #FOUC h2::before {
   content: "ⓘ ";
@@ -243,6 +248,8 @@ footer {
   padding: var(--pad05) var(--pad);
   background-color: var(--c90);
   margin: 0;
+  position: sticky;
+  bottom: 0;
   border-top: 1px solid var(--c60);
   border-bottom: none;
   display: flex;
