@@ -32,7 +32,7 @@
     padding-top: $pad025;
   }
   tr:hover {
-    background-color: hsla(180, 50%, 36%, .2);
+    background-color: hsla(255, 50%, 55%, .18); /* fork: violet tint */
   }
   td {
     padding: 0;

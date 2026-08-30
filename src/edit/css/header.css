@@ -114,7 +114,7 @@
       pointer-events: none;
     }
     &:hover {
-      background-color: hsla(180, 50%, 36%, .2);
+      background-color: hsla(255, 50%, 55%, .18); /* fork: violet tint */
     }
     &[tabindex="0"]::before {
       counter-increment: codelabel;
