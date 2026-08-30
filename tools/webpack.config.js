@@ -137,6 +137,7 @@ function makeManifest(files) {
   return JSON.stringify(base, null, 2);
 }
 
+// eslint-disable-next-line no-unused-vars -- kept for re-enabling stylus-lang if a CSP-safe compiler lands
 function patchStylus(str) {
   const str2 = str.replace(/(?<=segments=)\[new [$\w]+\.Literal\(([$\w]+)\.join\(", "\)\)]/, '$1');
   if (str === str2) throw new Error(patchStylus.name + ' failed!');
